@@ -81,6 +81,16 @@ var TongWen = (function () {
     node.style.backgroundColor = "#F00";
     document.body.appendChild(node);
   }
+  // [].indexOf() isn't a native function in IE, just use a non-native instead (extending Array.prototype breaks for-each loop).
+  function indexOf(array, element){
+    for(var i=0; i<array.length; i++){
+      if(array[i]==element){
+        return i;
+      }
+    }
+
+    return -1
+  }
 
   // =============================================================================
 
@@ -301,8 +311,8 @@ var TongWen = (function () {
         }
       }
 
-      if ((curZhFlag == "") && (zhEncodesAll.indexOf(charset) >= 0)) {
-        curZhFlag = (zhEncodesTrad.indexOf(charset) >= 0) ? flagSimp : flagTrad;
+      if ((curZhFlag == "") && (indexOf(zhEncodesAll,charset) >= 0)) {
+        curZhFlag = (indexOf(zhEncodesTrad,charset) >= 0) ? flagSimp : flagTrad;
       }
     } else {
       curZhFlag = (curZhFlag == flagTrad) ? flagSimp : flagTrad;
