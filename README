@@ -1,0 +1,12 @@
+New Tong Wen Tang
+=================
+New Tong Wen Tang is a javascript library that does traditional <-> simplified Chinese conversion.
+
+It was created by [softcup](https://github.com/softcup) and is hosted on http://tongwen.openfoundry.org/
+
+This repo contains various fixes/improvements to New Tong Wen Tang.
+
+License
+=======
+新同文堂及其一切附件是以自由軟體形式的 GNU 通用公共許可證第二版 (GPL) 發佈的。
+New Tong Wen Tang and all its extensions are released under the GNU General Public License (GPL) version 2
